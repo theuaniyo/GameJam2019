@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
     private float lerpValue = 0;
 
-    public float movementTime = 5;
+    public float movementTime;
 
 
     
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
 
                 startPosition = tf.position;
 
-                endPosition = new Vector3(tf.position.x, tf.position.y, tf.position.z + 3);
+                endPosition = new Vector3(tf.position.x, tf.position.y, 1);
   
                 subiendoCarril = true;
 
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
 
                 startPosition = tf.position;
 
-                endPosition = new Vector3(tf.position.x, tf.position.y, tf.position.z - 3);
+                endPosition = new Vector3(tf.position.x, tf.position.y, -2);
 
                 bajandoCarril = true;
 
@@ -101,12 +101,13 @@ public class Player : MonoBehaviour
 
         if (subiendoCarril)
         {
-            if(tf.position.z < 1)
+            if(tf.position.z < 0.999f)
             {
                 lerpValue += Time.deltaTime / movementTime;
                 tf.position = Vector3.Lerp(new Vector3(tf.position.x, tf.position.y, startPosition.z), 
                                             new Vector3(tf.position.x, tf.position.y, endPosition.z),
                                             lerpValue);
+                Debug.Log("true");
 
             }
             else
@@ -119,7 +120,7 @@ public class Player : MonoBehaviour
 
         if (bajandoCarril)
         {
-            if (tf.position.z > -2)
+            if (tf.position.z > -1.999f)
             {
                 lerpValue += Time.deltaTime / movementTime;
                 tf.position = Vector3.Lerp(new Vector3(tf.position.x, tf.position.y, startPosition.z),
@@ -146,6 +147,10 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag.Equals(groundTag))
         {
+
+            subiendoCarril = false;
+            bajandoCarril = false;
+
             jumping = false;
 
             saltos = 0;

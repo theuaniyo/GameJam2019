@@ -5,8 +5,32 @@
     <e p="C:\Users\Juanjo\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_GameJam2019.2033327227.00" t="ExcludeRecursive" />
     <e p="D:\Unity Projects\GameJam2019" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FantasyEffectLitePack1" t="Include">
+          <e p="README 1.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="CompileLogger.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="FarlandSkies" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Player" t="Include">
+                <e p="FPSWalkerEnhanced.cs" t="Include" />
+                <e p="SmoothMouseLook.cs" t="Include" />
+              </e>
+              <e p="Skybox" t="Include">
+                <e p="SkyboxChanger.cs" t="Include" />
+                <e p="SkyboxRotator.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="GitHub" t="Include">
             <e p="Editor" t="Include">
@@ -15,18 +39,23 @@
               <e p="ExtensionLoader.cs" t="Include" />
             </e>
           </e>
+          <e p="Scripts" t="Include">
+            <e p="Player.cs" t="Include" />
+          </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Enemy.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+        </e>
+        <e p="TinyFire VFX" t="Include">
+          <e p="LightControl.cs" t="Include" />
         </e>
       </e>
       <e p="GameJam2019.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
