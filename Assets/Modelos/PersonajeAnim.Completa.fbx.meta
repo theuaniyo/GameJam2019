@@ -1,46 +1,46 @@
 fileFormatVersion: 2
-guid: a5f92a8b3012c6745964f5f4e968d056
+guid: 1157280744d217144bad3f0b5312dca1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
     100002: Cube_001
-    100004: Root
-    100006: Root_001
-    100008: Root_002
-    100010: Root_003
-    100012: Root_004
-    100014: Root_005
-    100016: Root_006
-    100018: Root_007
-    100020: Root_008
-    100022: Root_009
-    100024: Root_010
-    100026: Root_011
-    100028: Root_012
-    100030: Root_013
-    100032: Root_014
-    100034: Root_015
-    100036: //RootNode
+    100004: //RootNode
+    100006: Root
+    100008: Root_001
+    100010: Root_002
+    100012: Root_003
+    100014: Root_004
+    100016: Root_005
+    100018: Root_006
+    100020: Root_007
+    100022: Root_008
+    100024: Root_009
+    100026: Root_010
+    100028: Root_011
+    100030: Root_012
+    100032: Root_013
+    100034: Root_014
+    100036: Root_015
     400000: Armature
     400002: Cube_001
-    400004: Root
-    400006: Root_001
-    400008: Root_002
-    400010: Root_003
-    400012: Root_004
-    400014: Root_005
-    400016: Root_006
-    400018: Root_007
-    400020: Root_008
-    400022: Root_009
-    400024: Root_010
-    400026: Root_011
-    400028: Root_012
-    400030: Root_013
-    400032: Root_014
-    400034: Root_015
-    400036: //RootNode
+    400004: //RootNode
+    400006: Root
+    400008: Root_001
+    400010: Root_002
+    400012: Root_003
+    400014: Root_004
+    400016: Root_005
+    400018: Root_006
+    400020: Root_007
+    400022: Root_008
+    400024: Root_009
+    400026: Root_010
+    400028: Root_011
+    400030: Root_012
+    400032: Root_013
+    400034: Root_014
+    400036: Root_015
     2100000: Tela__TelaTex_jpg
     2100002: Vaqueros__VaquerosTex_jpg
     2100004: Zapatos__ZapatosTex_jpg
@@ -49,8 +49,10 @@ ModelImporter:
     2100010: Vendas__VendasTex_jpg
     2100012: Pelo__PeloTex_jpg
     4300000: Cube_001
-    7400000: Anim_Salto01
-    7400002: Anim_Salto02
+    7400000: Anim_Aterrizaje
+    7400002: Anim_Caminata
+    7400004: Anim_Est_tico
+    7400006: Anim_Salto
     9500000: //RootNode
     13700000: Cube_001
   externalObjects: {}
@@ -82,10 +84,38 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Anim_Salto01
-      takeName: Anim_Salto01
+      name: Anim_Aterrizaje
+      takeName: Anim_Aterrizaje
+      firstFrame: -1
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Anim_Caminata
+      takeName: Anim_Caminata
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 44
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -110,10 +140,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Anim_Salto02
-      takeName: Anim_Salto02
-      firstFrame: -1
-      lastFrame: 4
+      name: Anim_Est_tico
+      takeName: Anim_Est_tico
+      firstFrame: 0
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -121,6 +151,34 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Anim_Salto
+      takeName: Anim_Salto
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

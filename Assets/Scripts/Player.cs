@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     public float movementTime;
 
-
+    private Animator anim;
     
     
 
@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
 
         tf = GetComponent<Transform>();
 
+        anim = GetComponent<Animator>();
+
         saltos = 0;
 
 }
@@ -45,11 +47,20 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+
+            anim.SetBool("Caminando", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            anim.SetBool("Caminando", false);
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+
+            anim.SetBool("Caminando", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && !jumping)
@@ -63,14 +74,16 @@ public class Player : MonoBehaviour
                 jumping = true;
             }
 
+            anim.SetBool("Saltando", true);
 
-            
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
            if(tf.position.z < 1 && !subiendoCarril && !bajandoCarril)
             {
+
+                anim.SetBool("Caminando", true);
 
                 startPosition = tf.position;
 
@@ -87,6 +100,8 @@ public class Player : MonoBehaviour
         {
             if (tf.position.z > -2 && !bajandoCarril && !subiendoCarril)
             {
+
+                anim.SetBool("Caminando", true);
 
                 startPosition = tf.position;
 
@@ -150,6 +165,8 @@ public class Player : MonoBehaviour
 
             subiendoCarril = false;
             bajandoCarril = false;
+
+            anim.SetBool("Saltando", false);
 
             jumping = false;
 
