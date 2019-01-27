@@ -41,7 +41,8 @@ public class Player : MonoBehaviour
 
         saltos = 0;
 
-}
+        setPlayerPosition();
+    }
 
     // Update is called once per frame
     void Update()
@@ -182,5 +183,22 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         pared.enabled = false;
+    }
+
+    private void setPlayerPosition()
+    {
+        anim.SetBool("Caminando", true);
+
+        startPosition = tf.position;
+
+        endPosition = new Vector3(tf.position.x, tf.position.y, 1);
+
+        while (tf.position.z > 0.999f)
+        {
+            lerpValue += Time.deltaTime / movementTime;
+            tf.position = Vector3.Lerp(new Vector3(tf.position.x, tf.position.y, startPosition.z), 
+                new Vector3(tf.position.x, tf.position.y, endPosition.z),
+                lerpValue);
+        }
     }
 }

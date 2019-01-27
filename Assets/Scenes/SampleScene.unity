@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3909017, g: 0.46438307, b: 0.5540639, a: 1}
+  m_IndirectSpecularColor: {r: 0.39080524, g: 0.46195376, b: 0.5535344, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3502,7 +3502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.121714145, y: -0.72355413, z: 0.13081893, w: 0.66673946}
-  m_LocalPosition: {x: 0.037056115, y: 0.026868327, z: -0.014525409}
+  m_LocalPosition: {x: 0.02022, y: 0.02052, z: -0.01591}
   m_LocalScale: {x: 0.0056493054, y: 0.006365758, z: 0.009727488}
   m_Children: []
   m_Father: {fileID: 1309811063}
@@ -5266,6 +5266,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 096cf5699228c3f429152f2680d9069a, type: 2}
+    - target: {fileID: 158921123, guid: 505f371a5c41e0a4e9b4d3a21336cae9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 394654216, guid: 505f371a5c41e0a4e9b4d3a21336cae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20723648, guid: 505f371a5c41e0a4e9b4d3a21336cae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 505f371a5c41e0a4e9b4d3a21336cae9, type: 3}
 --- !u!1001 &879143714
@@ -8112,8 +8124,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310047575}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2, y: 0.09, z: -2.1}
+  m_LocalRotation: {x: -0, y: 0.44698152, z: -0, w: 0.8945433}
+  m_LocalPosition: {x: 3.54, y: 0.09000003, z: 3.31}
   m_LocalScale: {x: 177.01292, y: 177.01292, z: 177.01292}
   m_Children:
   - {fileID: 1309811059}
@@ -8121,7 +8133,7 @@ Transform:
   - {fileID: 534669905}
   m_Father: {fileID: 0}
   m_RootOrder: 40
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 53.100002, z: 0}
 --- !u!4 &1309811065
 Transform:
   m_ObjectHideFlags: 0
@@ -8423,6 +8435,7 @@ GameObject:
   - component: {fileID: 1317326483}
   - component: {fileID: 1801102385}
   - component: {fileID: 1801102384}
+  - component: {fileID: 1310047576}
   m_Layer: 0
   m_Name: PersonajeAnim.Completa
   m_TagString: Untagged
@@ -8430,6 +8443,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1310047576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310047575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0565dc98e190dbb4c921836a99e4ef6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 2061197602}
 --- !u!1 &1310047577
 GameObject:
   m_ObjectHideFlags: 0
@@ -13439,6 +13465,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5820f6965d7e0e44097957eade9e3a34, type: 3}
+--- !u!1 &2061197602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 158921123, guid: 505f371a5c41e0a4e9b4d3a21336cae9,
+    type: 3}
+  m_PrefabInstance: {fileID: 823359486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2065189308
 PrefabInstance:
   m_ObjectHideFlags: 0
