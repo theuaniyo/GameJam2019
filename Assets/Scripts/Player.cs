@@ -24,8 +24,10 @@ public class Player : MonoBehaviour
     public float movementTime;
 
     private Animator anim;
-    
-    
+
+    public MeshRenderer pared;
+
+
 
 
     // Use this for initialization
@@ -160,6 +162,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        lerpValue = 0;
+
         if (other.gameObject.tag.Equals(groundTag))
         {
 
@@ -173,5 +177,10 @@ public class Player : MonoBehaviour
             saltos = 0;
 
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        pared.enabled = false;
     }
 }

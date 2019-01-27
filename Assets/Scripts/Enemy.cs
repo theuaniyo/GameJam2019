@@ -23,6 +23,8 @@ public class enemy : MonoBehaviour
 
     private bool following = false;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,8 +57,8 @@ public class enemy : MonoBehaviour
             {
                 lerpValue += Time.deltaTime / movementTime;
 
-                tf.position = Vector3.Lerp(new Vector3(startPosition.x, tf.position.y, startPosition.z),
-                                                   new Vector3(endPosition.x, tf.position.y, endPosition.z),
+                tf.position = Vector3.Lerp(new Vector3(startPosition.x, startPosition.y, startPosition.z),
+                                                   new Vector3(endPosition.x, endPosition.y, endPosition.z),
                                                    lerpValue);
             }
             else
