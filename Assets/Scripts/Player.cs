@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public int jumpPower;
     private String groundTag = "Ground";
     private bool jumping;
-    private int saltos;
+
     private Transform tf;
 
     private Vector3 startPosition;
@@ -27,6 +27,16 @@ public class Player : MonoBehaviour
 
     public MeshRenderer pared;
 
+    private bool checkMarco = false;
+
+    private bool checkAvion = false;
+
+    public GameObject marcoChimenea;
+
+    public GameObject puertaCerrada;
+
+    public GameObject puertaAbierta;
+
 
 
 
@@ -39,10 +49,7 @@ public class Player : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
-        saltos = 0;
-
-        setPlayerPosition();
-    }
+}
 
     // Update is called once per frame
     void Update()
@@ -70,12 +77,8 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
 
-            saltos++;
+            jumping = true;
 
-            if(saltos == 2)
-            {
-                jumping = true;
-            }
 
             anim.SetBool("Saltando", true);
 
@@ -156,6 +159,15 @@ public class Player : MonoBehaviour
 
         }
 
+        if (checkMarco)
+        {
+            marcoChimenea.SetActive(true);
+            puertaCerrada.SetActive(false);
+            puertaAbierta.SetActive(true);
+        }
+
+        
+
 
 
 
@@ -175,30 +187,54 @@ public class Player : MonoBehaviour
 
             jumping = false;
 
-            saltos = 0;
-
         }
+
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        pared.enabled = false;
-    }
-
-    private void setPlayerPosition()
-    {
-        anim.SetBool("Caminando", true);
-
-        startPosition = tf.position;
-
-        endPosition = new Vector3(tf.position.x, tf.position.y, 1);
-
-        while (tf.position.z > 0.999f)
+        if (other.gameObject.tag.Equals("Enemy"))
         {
-            lerpValue += Time.deltaTime / movementTime;
-            tf.position = Vector3.Lerp(new Vector3(tf.position.x, tf.position.y, startPosition.z), 
-                new Vector3(tf.position.x, tf.position.y, endPosition.z),
-                lerpValue);
+
+            StartCoroutine(GameObject.FindObjectOfType<Fade_Scene>().FadeAndLoadScene(Fade_Scene.FadeDirection.In, "DeathScene"));
+
         }
+        else
+        {
+            pared.enabled = false;
+        }
+
+       
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Marco"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                checkMarco = true;
+
+                Destroy(other.gameObject);
+            }  
+
+        }
+
+
+        if (other.gameObject.tag.Equals("Avion"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                checkAvion = true;
+
+                Destroy(other.gameObject);
+            }
+
+        }
+
+    }
+
 }
